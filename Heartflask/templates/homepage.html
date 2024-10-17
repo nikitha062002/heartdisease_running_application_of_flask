@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+</head>
+<body>
+    <div class="heart-background"></div>
+    <nav>
+        <div class="logo">Heart Disease Prediction</div>
+    </nav>
+    <div class="center-content">
+        <h1>Heart Disease Predictor</h1>
+        <button id="predict-btn" class="predict-btn">Predict</button>
+    </div>
+    <script src="{{ url_for('static', filename='homepage.js') }}"></script>
+</body>
+</html>
+

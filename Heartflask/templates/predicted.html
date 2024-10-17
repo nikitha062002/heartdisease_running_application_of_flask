@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predicted.css') }}">
+</head>
+<body>
+    <div class="heart-background"></div>
+
+    <!-- Fixed Navbar -->
+    <nav>
+        <div class="logo">Prediction Results</div>
+    </nav>
+
+    <main>
+        <div class="results-container">
+            <h2>Heart Disease Prediction</h2>
+
+            <!-- Displaying Prediction and Probability -->
+            <p>
+                {% if heart_disease == '1' %}
+                    You are at risk of heart disease.
+                {% else %}
+                    You are not at risk of heart disease.
+                {% endif %}
+            </p>
+            <p>Probability: {{ probability }}%</p>
+
+            <!-- Button to make another prediction -->
+            <a href="{{ url_for('predict_page') }}" class="back-button">Make Another Prediction</a>
+
+            <!-- Button to go back to the homepage -->
+            <a href="/homepage" class="back-button">Go Back to Homepage</a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='predicted.js') }}"></script>
+</body>
+</html>
+
+
+

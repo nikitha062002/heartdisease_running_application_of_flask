@@ -1,0 +1,109 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Full-screen background image */
+.heart-background {
+    background-image: url('heart.jpg'); /* Replace with actual path to heart.jpg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210%;
+    z-index: -1; /* Set behind other content */
+}
+
+/* Navbar styling */
+nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent navbar */
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar title and logo */
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 80px; /* Push content below the fixed navbar */
+}
+
+/* Form container styles */
+.form-container {
+        background-color: rgba(255, 255, 255, 0.8); /* white background with opacity */
+        padding: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 400px; /* Adjust as necessary */
+        margin: auto; /* Center the container */    
+}
+
+/* Form styles */
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+}
